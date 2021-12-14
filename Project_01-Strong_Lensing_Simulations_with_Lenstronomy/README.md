@@ -96,6 +96,35 @@ Finally the **GEOMETRY** section
 
 here we divide the final images in planes, the separation of the planes will be given by the redshift. You can define as many geometry as you want, with as many planes as you wish, but here I may keep it simple and define one geometry witha plane for the lens and one plane for the source.
 
+## Links
+You can access the presentation [here](https://docs.google.com/presentation/d/e/2PACX-1vR2NZ0LvKVMzO5zaNE6dVN1I6R8urJjNUO6ZcVzPK53Ub6o0-_ZdrPRMPUog8pUgDS2ahr-qhLfXPBT/pub?start=false&loop=false&delayms=3000)
 
-# Bibliography
+
+
+## Bibliografy
+``@article{deeplenstronomy,
+  doi = {10.21105/joss.02854},
+  url = {https://doi.org/10.21105/joss.02854},
+  year = {2021},
+  publisher = {The Open Journal},
+  volume = {6},
+  number = {58},
+  pages = {2854},
+  author = {Robert Morgan and Brian Nord and Simon Birrer and Joshua Yao-Yu Lin and Jason Poh},
+  title = {deeplenstronomy: A dataset simulation package for strong gravitational lensing},
+  journal = {Journal of Open Source Software}
+}
+
+@article{lenstronomy,
+    title     =   "lenstronomy: Multi-purpose gravitational lens modelling software package",
+    journal   =   "Physics of the Dark Universe",
+    volume    =   "22",
+    pages     =   "189 - 201",
+    year      =   "2018",
+    issn      =   "2212-6864",
+    doi       =   "10.1016/j.dark.2018.11.002",
+    url       =   "http://www.sciencedirect.com/science/article/pii/S2212686418301869",
+    author    =   "Simon Birrer and Adam Amara",
+    keywords  =   "Gravitational lensing, Software, Image simulations"
+}``
 
