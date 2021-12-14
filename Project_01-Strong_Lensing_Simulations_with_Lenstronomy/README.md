@@ -1,7 +1,3 @@
----
-bibliography: references.bib
-nocite: '@*'
-... 
 # Project 01 - Strong Lensing Simulations with Lenstronomy
 
 ## INTRODUCTION
@@ -101,8 +97,9 @@ You can access the presentation [here](https://docs.google.com/presentation/d/e/
 
 
 
-## Bibliografy
-``@article{deeplenstronomy,
+## Bibliography
+
+> @article{deeplenstronomy,
   doi = {10.21105/joss.02854},
   url = {https://doi.org/10.21105/joss.02854},
   year = {2021},
@@ -115,7 +112,7 @@ You can access the presentation [here](https://docs.google.com/presentation/d/e/
   journal = {Journal of Open Source Software}
 }
 
-@article{lenstronomy,
+> @article{lenstronomy,
     title     =   "lenstronomy: Multi-purpose gravitational lens modelling software package",
     journal   =   "Physics of the Dark Universe",
     volume    =   "22",
@@ -126,5 +123,5 @@ You can access the presentation [here](https://docs.google.com/presentation/d/e/
     url       =   "http://www.sciencedirect.com/science/article/pii/S2212686418301869",
     author    =   "Simon Birrer and Adam Amara",
     keywords  =   "Gravitational lensing, Software, Image simulations"
-}``
+}
 
