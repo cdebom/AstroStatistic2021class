@@ -1,0 +1,228 @@
+#This file was inpired by the full example of using deeplenstronomy.
+
+
+## We start at the top level with the DATASET section
+
+DATASET:
+    NAME: ExampleDataset # set a name, this value is only used if you request the h5 file format
+    PARAMETERS:
+        SIZE: 1000 # number of images in the full dataset, I'll keep it small for this example
+        OUTDIR: ExampleDataset # will be created on your system if your request to save images
+        seed: 100
+
+## Next we'll specify the COSMOLOGY to use, I'll keep it simple a just use basic values
+
+COSMOLOGY:
+    PARAMETERS:
+        H0: 74.0
+        Om0: 0.3
+
+
+## the SPECIES section
+## difering to the original full example I shall work with galaxy-galaxy lens system only
+
+SPECIES:
+    GALAXY_1:  # This will be the first type of lens galaxy, and it's properties will by fully simulated
+        NAME: SimulatedLens # name of this galaxy object
+        LIGHT_PROFILE_1: # we'll describe how the light of this galaxy looks
+            NAME: SERSIC_ELLIPSE # a good default lenstronomy light model
+            PARAMETERS:
+                magnitude:
+                    DISTRIBUTION:
+                        NAME: normal
+                        PARAMETERS:
+                            mean: 24.0
+                            std: 1.0
+                center_x: 0.0 # set the lens galaxy to be at the center of the images
+                center_y: 0.0
+                R_sersic: # controls the angular size of the galaxy
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: normal  # use a normal distribution around 6
+                        PARAMETERS:
+                            mean: 6.0
+                            std: 1.5
+                n_sersic: # controls the slope of the light profile
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: normal  # use a normal distribution around 4
+                        PARAMETERS:
+                            mean: 4.0
+                            std: 0.8
+                e1: # controls half of the eccentricity of the galaxy
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: uniform # use a uniform distribution on (-1,1)
+                        PARAMETERS:
+                            minimum: -0.3
+                            maximum: 0.3
+                e2: # controls other half of the eccentricity of the galaxy
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: uniform # use a uniform distribution on (-1,1)
+                        PARAMETERS:
+                            minimum: -0.3
+                            maximum: 0.3
+        MASS_PROFILE_1: # now let's describe how the mass will be distributed in this galaxy
+            NAME: SIE # a good default lenstronomy mass model
+            PARAMETERS:
+                theta_E: # the Einstein radius of the lensing
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: uniform # use a uniform distribution from 0.5 to 10
+                        PARAMETERS:
+                            minimum: 0.5
+                            maximum: 3
+                e1: # controls half of the eccentricity of the galaxy's mass distribution
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: uniform # use a uniform distribution on (-1,1)
+                        PARAMETERS:
+                            minimum: -0.3
+                            maximum: 0.3
+                e2: # controls other half of the eccentricity of the galaxy's mass distribution
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: uniform # use a uniform distribution on (-1,1)
+                        PARAMETERS:
+                            minimum: -0.3
+                            maximum: 0.3
+                center_x: 0.0 # center the mass distribution since the light was centered as well
+                center_y: 0.0 
+
+
+    GALAXY_2: # now we'll do a source galaxy, and no need for a mass profile since only the light matters in the lensing
+        NAME: SimulatedSource
+        LIGHT_PROFILE_1:
+            NAME: SERSIC_ELLIPSE
+            PARAMETERS:
+                magnitude:
+                    DISTRIBUTION:
+                        NAME: normal
+                        PARAMETERS:
+                            mean: 20.0
+                            std: 1.0
+                center_x:
+                    DISTRIBUTION: #draw source position from a distribution to allow for small misalignments
+                        NAME: normal
+                        PARAMETERS:
+                            mean: 0.0
+                            std: 0.5
+                center_y:
+                    DISTRIBUTION: #draw source position from a distribution to allow for small misalignments
+                        NAME: normal
+                        PARAMETERS:
+                            mean: 0.0
+                            std: 0.5
+                R_sersic: # controls the angular size of the galaxy
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: normal  # use a normal distribution around 6
+                        PARAMETERS:
+                            mean: 6.0
+                            std: 1.5
+                n_sersic: # controls the slope of the light profile
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: normal  # use a normal distribution around 4
+                        PARAMETERS:
+                            mean: 4.0
+                            std: 0.8
+                e1: # controls half of the eccentricity of the galaxy
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: uniform # use a uniform distribution on (-1,1)
+                        PARAMETERS:
+                            minimum: -0.3
+                            maximum: 0.3
+                e2: # controls other half of the eccentricity of the galaxy
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: uniform # use a uniform distribution on (-1,1)
+                        PARAMETERS:
+                            minimum: -1.0
+                            maximum: 1.0
+        MASS_PROFILE_1: # now let's describe how the mass will be distributed in this galaxy
+            NAME: SIE # a good default lenstronomy mass model
+            PARAMETERS:
+                theta_E: # the Einstein radius of the lensing
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: uniform # use a uniform distribution from 0.5 to 10
+                        PARAMETERS:
+                            minimum: 0.5
+                            maximum: 3
+                e1: # controls half of the eccentricity of the galaxy's mass distribution
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: uniform # use a uniform distribution on (-1,1)
+                        PARAMETERS:
+                            minimum: -0.3
+                            maximum: 0.3
+                e2: # controls other half of the eccentricity of the galaxy's mass distribution
+                    DISTRIBUTION: # draw from a distribution to give the dataset diversity
+                        NAME: uniform # use a uniform distribution on (-1,1)
+                        PARAMETERS:
+                            minimum: -0.3
+                            maximum: 0.3
+                center_x: 0.0 # center the mass distribution since the light was centered as well
+                center_y: 0.0 
+        
+
+## Now we can target our USERDISTs for the parameters we wanted to overwrite
+
+DISTRIBUTIONS:
+    USERDIST_1:
+        FILENAME: data/lens_redshifts.txt  
+        MODE: sample
+    USERDIST_2:
+        FILENAME: data/mags_lens.txt  
+        MODE: sample
+
+
+## Lastly, we'll specify how we want the GEOMETRY of the systems simulated
+
+GEOMETRY:
+    CONFIGURATION_1: 
+        NAME: GalaxyGalaxySimulated # describe what's in this configuration
+        FRACTION: 1 
+        PLANE_1: # add all objects in the first plane
+            OBJECT_1: SimulatedLens # name of the object to put in this plane
+            PARAMETERS:
+                REDSHIFT:
+                    DISTRIBUTION:
+                        NAME: uniform
+                        PARAMETERS:
+                            minimum: 0.3
+                            maximum: 1
+        PLANE_2: # add all objects in the second plane
+            OBJECT_1: SimulatedSource
+            PARAMETERS:
+                REDSHIFT:
+                    DISTRIBUTION:
+                        NAME: uniform
+                        PARAMETERS:
+                            minimum: 1.3
+                            maximum: 6
+
+
+IMAGE:
+    PARAMETERS:
+        exposure_time:
+            DISTRIBUTION:
+                NAME: des_exposure_time
+                PARAMETERS: None
+        numPix: 100
+        pixel_scale: 0.263
+        psf_type: 'GAUSSIAN'
+        read_noise: 7
+        ccd_gain:
+            DISTRIBUTION:
+                NAME: des_ccd_gain
+                PARAMETERS: None
+SURVEY:
+    PARAMETERS:
+        BANDS: g,r,i,z,Y
+        seeing:
+            DISTRIBUTION:
+                NAME: des_seeing
+                PARAMETERS: None
+        magnitude_zero_point:
+            DISTRIBUTION:
+                NAME: des_magnitude_zero_point
+                PARAMETERS: None
+        sky_brightness:
+            DISTRIBUTION:
+                NAME: des_sky_brightness
+                PARAMETERS: None
+        num_exposures:
+            DISTRIBUTION:
+                NAME: des_num_exposures
+                PARAMETERS: None
