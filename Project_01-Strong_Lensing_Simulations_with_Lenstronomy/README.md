@@ -1,7 +1,7 @@
 ---
 bibliography: references.bib
-csl: biomed-central.csl
----
+nocite: '@*'
+... 
 # Project 01 - Strong Lensing Simulations with Lenstronomy
 
 ## INTRODUCTION
@@ -32,7 +32,7 @@ This data set has 23 columns that caracterise 18598 strong lens systems. The dee
 
 ## The Deeplentronomy
 
-The deeplenstronomy is a module created in python for the simulation of strong lens datasets. One can find more informations [here](https://pypi.org/project/deeplenstronomy/) and [here](https://github.com/deepskies/deeplenstronomy). @deeplenstronomy, @lenstronomy 
+The deeplenstronomy is a module created in python for the simulation of strong lens datasets. One can find more informations [here](https://pypi.org/project/deeplenstronomy/) and [here](https://github.com/deepskies/deeplenstronomy).
 
 In addition to that this project was based in the Deeplentronomy full example that can be found [here](https://deepskies.github.io/deeplenstronomy/Notebooks/FullExample.html)
 
@@ -97,6 +97,5 @@ Finally the **GEOMETRY** section
 here we divide the final images in planes, the separation of the planes will be given by the redshift. You can define as many geometry as you want, with as many planes as you wish, but here I may keep it simple and define one geometry witha plane for the lens and one plane for the source.
 
 
-## References
+# Bibliography
 
-<div id="refs"></div>
