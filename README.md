@@ -1,5 +1,5 @@
 # AstroStatistic2021class
-This repository concentrates the codes and notebooks related to the AstroStatistics and Big Data lectures at CBPF, including final projects for 2021.b. You can find the description of each project below.
+This repository concentrates the codes and notebooks related to the final term projects of AstroStatistics and Big Data lectures at CBPF for 2021.b (professor Clecio R. Bom). You can find the description of each project below. For further info on 
 
 ## Projeto 01 - Strong Lensing Simulations with Lenstronomy
 Grasiele
@@ -24,10 +24,12 @@ SL = Strong Lensing
 Pedro Riba
 
 ### Objetivo:
-	O armazenamento e a transmissão de dados pode ser um dos gargalos no estudo de astronomia e cosmologia, conforme o volume de dados aumenta. O objetivo do atual projeto é entender e aplicar duas técnicas diferentes para compressão da distribuição de densidade de probabilidade (PDF) de redshift fotométrico, a técnica de “Principal Component Analysis” (PCA) e o auto-enconder.
+
+O armazenamento e a transmissão de dados pode ser um dos gargalos no estudo de astronomia e cosmologia, conforme o volume de dados aumenta. O objetivo do atual projeto é entender e aplicar duas técnicas diferentes para compressão da distribuição de densidade de probabilidade (PDF) de redshift fotométrico, a técnica de “Principal Component Analysis” (PCA) e o auto-enconder.
 
 ### O que farei:
-	Começarei estudando um exemplo simples, uma distribuição gaussiana de redshift fotométrico. Aplicarei a técnica de PCA e o auto-enconder para comprimir as PDF’s. Após, em um conjunto de dados mais realistas para redshift fotométrico, aplicarei as mesmas técnicas. Para avaliar a qualidade da compressão realizada utilizarei dois métodos distintos. Primeiramente analisarei o “Bayesian Information Criterion" (BIC) da distribuição após a compressão e antes da compressão. Além disso, analisarei a qualidade de compressão calculando a entropia relativa - ou divergência 	de Kullback-Leibler - entre as duas distribuições. Essa divergência serve de forma análoga a uma “distância” entre duas distribuições, sendo assim, nos dá informações importantes sobre o quão boa em manter o caráter principal dos dados é a técnica de compressão utilizada. 
+
+Começarei estudando um exemplo simples, uma distribuição gaussiana de redshift fotométrico. Aplicarei a técnica de PCA e o auto-enconder para comprimir as PDF’s. Após, em um conjunto de dados mais realistas para redshift fotométrico, aplicarei as mesmas técnicas. Para avaliar a qualidade da compressão realizada utilizarei dois métodos distintos. Primeiramente analisarei o “Bayesian Information Criterion" (BIC) da distribuição após a compressão e antes da compressão. Além disso, analisarei a qualidade de compressão calculando a entropia relativa - ou divergência de Kullback-Leibler - entre as duas distribuições. Essa divergência serve de forma análoga a uma “distância” entre duas distribuições, sendo assim, nos dá informações importantes sobre o quão boa em manter o caráter principal dos dados é a técnica de compressão utilizada. 
 
 
 ## Project 03 - MAP a survey Depth
@@ -152,10 +154,10 @@ https://machinelearningmastery.com/model-based-outlier-detection-and-removal-in-
 ## Project 08 - Searching for pattern in galaxy structure 
 Mariana
  É conhecido por meio de observações que o ambiente tem papel relevante nas propriedades das galáxias (por exemplo, Dressler et al 1980). No entanto, ainda não sabemos de que forma o ambiente interfere na evolução intrínseca das galáxias. Para obter insights sobre este tema podemos investigar aglomerados de galáxias, que são as estruturas mais densas do Universo, em seus estágios iniciais de formação - os chamados protoaglomerados. Ao analisarmos protoaglomerados em diferentes estágios evolutivos podemos ter pistas sobre a evolução do efeito ambiental nestas estruturas muito massivas.	Neste projeto buscamos refazer a análise de Toshikawa et al 2020 em z~4 , em que um dos argumentos* para sugerir a existência de protoaglomerados é: se a distribuição espacial das galáxias dentro de um volume amostrado tem baixíssima probabilidade de ser randômica, estas galáxias provavelmente estão agrupadas por alguma razão física (poço de potencial gravitacional) invés de constituirem uma estrutura formada ao acaso. Neste caso há indícios da existência de um protoaglomerado. Vamos verificar se um dos protoaglomerados identificados no artigo Toshikawa et al 2020 é provavelmente uma estrutura formada ao acaso ou não. Para fazer esta análise vamos utilizar os dados do próprio artigo sobre um protoaglomerado de 13 galáxias em z~4 identificado por eles e:
-- Redistribuir randomicamente todas as galáxias detectadas dentro do volume amostrado por eles
-- Verificar a probabilidade de 13 do número total de galáxias se agruparem dentro de uma faixa de redshift de deltaz=0.02 (como no protoaglomerado detectado)
-- Concluir se esta estrutura de 13 galáxias dentro de um deltaz=0.02 tem alta ou baixa probabilidade de ser uma estrutura formada ao acaso e comparar com os resultados de Toshikawa et al 2020
-*Existem outros argumentos como tamanhos característicos de protoaglomerados em z~4 e cálculo de sobredensidade de galáxias na região, mas o foco deste projeto é apenas na probabilidade de se encontrar uma determinada distribuição espacial de objetos
+* Redistribuir randomicamente todas as galáxias detectadas dentro do volume amostrado por eles
+* Verificar a probabilidade de 13 do número total de galáxias se agruparem dentro de uma faixa de redshift de deltaz=0.02 (como no protoaglomerado detectado)
+* Concluir se esta estrutura de 13 galáxias dentro de um deltaz=0.02 tem alta ou baixa probabilidade de ser uma estrutura formada ao acaso e comparar com os resultados de Toshikawa et al 2020
+Existem outros argumentos como tamanhos característicos de protoaglomerados em z~4 e cálculo de sobredensidade de galáxias na região, mas o foco deste projeto é apenas na probabilidade de se encontrar uma determinada distribuição espacial de objetos
 
 ### Objetivo
 -Detectar estruturas em formação, como aglomerados de galáxias em alto redshift
