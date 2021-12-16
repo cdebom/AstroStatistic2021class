@@ -1,10 +1,11 @@
 # AstroStatistic2021class
 This repository concentrates the codes and notebooks related to the AstroStatistics and Big Data lectures at CBPF, including final projects for 2021.b. You can find the description of each project below.
 
-Projeto 01 - Strong Lensing Simulations with Lenstronomy
+## Projeto 01 - Strong Lensing Simulations with Lenstronomy
 Grasiele
 
-INTRODUCTION
+Introduction
+
 Strong lenses is a phenomenon that occurs when the light of a distant galaxy suffers a distortion when passing by a massive object (such as another galaxy or a galaxy cluster). These systems are exceptionally interesting because of the magnification effect, which allows us to observe objects that are even farther in the universe. Nevertheless, the study of such objects can be extremely expensive, due to the amount of time required in the large telescopes for the observation of it. Alternatively, the study of a synthetic population is extensively cheaper and it can  assist us in the understanding of observed systems. 
 
 In this work I intend to create a simulated sample of strong lenses using the deeplenstronomy library in python. Additionally, in order to assure that these computationally created systems can exist in the real universe, I shall compare it to an observed sample of strong lensing. 
@@ -19,7 +20,7 @@ Produce a set of Strong Lensing simulations, either SL quasar population or for 
 SL = Strong Lensing
 
 
-Project 02 - Probability Density Function compression
+## Project 02 - Probability Density Function compression
 Pedro Riba
 
 Objetivo:
@@ -29,20 +30,7 @@ O que farei:
 	Começarei estudando um exemplo simples, uma distribuição gaussiana de redshift fotométrico. Aplicarei a técnica de PCA e o auto-enconder para comprimir as PDF’s. Após, em um conjunto de dados mais realistas para redshift fotométrico, aplicarei as mesmas técnicas. Para avaliar a qualidade da compressão realizada utilizarei dois métodos distintos. Primeiramente analisarei o “Bayesian Information Criterion" (BIC) da distribuição após a compressão e antes da compressão. Além disso, analisarei a qualidade de compressão calculando a entropia relativa - ou divergência 	de Kullback-Leibler - entre as duas distribuições. Essa divergência serve de forma análoga a uma “distância” entre duas distribuições, sendo assim, nos dá informações importantes sobre o quão boa em manter o caráter principal dos dados é a técnica de compressão utilizada. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Project 03 - MAP a survey Depth
+## Project 03 - MAP a survey Depth
 (André Santos)
 
 Introduction
@@ -64,9 +52,7 @@ https://www.legacysurvey.org/dr9/catalogs/#region-tractor-aaa-tractor-brick-fits
 Ivezić, Željko, et al. Statistics, data mining, and machine learning in astronomy: A practical python guide for the analysis of survey data. Princeton University Press, 2019.
 
 
-
-
-Project 03 - Bayesian inference of H0 from simulated time delays (Arthur)
+## Project 03 - Bayesian inference of H0 from simulated time delays (Arthur)
 
 Introdução
 Time de delay é uma forma de medir a diferença de tempo de um sistema de lente gravitacional. Se objetos como quasares ou supernovas são afetados por lentes gravitacionais fortes, sua frente de onda de propagação se divide ao passar por esse objeto massivo (lente), formando múltiplas imagens. Além disso, essas imagens aparecem em tempos diferentes devido às diferentes geometrias entre os caminhos que a luz percorre, chegando em tempos diferentes ao observador. Ou seja, time delay é a diferença de tempo de chegada entre as imagens formadas. Nesse sentido, podemos medir essa diferença de time delay para fazer uma estimativa da constante de Hubble que é sensível a diferença de tempo dessas imagens múltiplas.
@@ -77,9 +63,8 @@ O que eu vou fazer?
 Primeiro vamos utilizar as informações de um conjunto de dados contendo determinados parâmetros, tais como o ângulo de Einstein e red-shifts da lente e da fonte, necessários para encontrar um sistema de lentes gravitacionais que formam múltiplas imagens, e com isso podemos determinar o time delay desses sistemas. Depois, é realizada uma inferência bayesiana nesses dados através de uma cadeia MCMC para determinar a distribuição de probabilidades dos parâmetros livres. Entre esses parâmetros está a constante de Hubble que desejamos estimar. 
 
 
+## Project 03.a - Deep or Bayesian? SL parameter inference (João)
 
-
-Project 03.a - Deep or Bayesian? SL parameter inference (João)
 Introduction
 The gravitational lensing effect, first proposed by Albert Einstein and confirmed later, in the XX century, has been a powerful tool in astronomy and cosmology. This is due to its slip parameter (also called by gamma factor), which gives an intuition on how different a theory could be from general relativity. In addition, with new surveys, such as, the last release of the dark energy survey (DES), the Hyper Suprime-Cam and the first available data of the Large Synoptic Survey Telescope (LSST) we will be able to improve precision. For this reason, faster and automated methods will be required in order to analyse these data. In this work, we intend to do a cross-check analysis between deep learning and Bayesian approaches.
 Goal
@@ -135,7 +120,7 @@ We will use machine learning techniques such as random forest, dense neural netw
 
 
 
-Project 07 - Where is Waldo? (Maurício)
+## Project 07 - Where is Waldo? (Maurício)
 Introduction
 Outliers in datasets are dubious figures: they can, in regression or classification processes, result in poor fit and poor predictive power for the model. But, in the realm of astronomy, an outlier can mean a rare object or even a phenomenon never before detected!
 
@@ -164,7 +149,7 @@ Markus M. Breunig, Hans-Peter Kriegel, Raymond T. Ng, and Jörg Sander. "LOF: id
 https://machinelearningmastery.com/model-based-outlier-detection-and-removal-in-python/
 
 
-Project 08 - Searching for pattern in galaxy structure (Mariana)
+## Project 08 - Searching for pattern in galaxy structure (Mariana)
  É conhecido por meio de observações que o ambiente tem papel relevante nas propriedades das galáxias (por exemplo, Dressler et al 1980). No entanto, ainda não sabemos de que forma o ambiente interfere na evolução intrínseca das galáxias. Para obter insights sobre este tema podemos investigar aglomerados de galáxias, que são as estruturas mais densas do Universo, em seus estágios iniciais de formação - os chamados protoaglomerados. Ao analisarmos protoaglomerados em diferentes estágios evolutivos podemos ter pistas sobre a evolução do efeito ambiental nestas estruturas muito massivas.	Neste projeto buscamos refazer a análise de Toshikawa et al 2020 em z~4 , em que um dos argumentos* para sugerir a existência de protoaglomerados é: se a distribuição espacial das galáxias dentro de um volume amostrado tem baixíssima probabilidade de ser randômica, estas galáxias provavelmente estão agrupadas por alguma razão física (poço de potencial gravitacional) invés de constituirem uma estrutura formada ao acaso. Neste caso há indícios da existência de um protoaglomerado. Vamos verificar se um dos protoaglomerados identificados no artigo Toshikawa et al 2020 é provavelmente uma estrutura formada ao acaso ou não. Para fazer esta análise vamos utilizar os dados do próprio artigo sobre um protoaglomerado de 13 galáxias em z~4 identificado por eles e:
 - Redistribuir randomicamente todas as galáxias detectadas dentro do volume amostrado por eles
 - Verificar a probabilidade de 13 do número total de galáxias se agruparem dentro de uma faixa de redshift de deltaz=0.02 (como no protoaglomerado detectado)
@@ -185,7 +170,7 @@ Dressler, A. 1980, ApJ, 236, 351-365
 Toshikawa, J., Malkan, M. A., Kashikawa, N., et al. 2020, ApJ, 888, 89, doi: 10.3847/1538-4357/ab5e85 
 
 
-Project 09 - Bayesian analysis of velocity dispersion expression with modified gravity (Fernanda)
+## Project 09 - Bayesian analysis of velocity dispersion expression with modified gravity (Fernanda)
 Introduction
 
 Strong lensing is an important tool to determine constraints on the Post-Newtonian Parameter  (https://arxiv.org/abs/1701.00357). It can be used to test gravitational models, like Einstein’s General Relativity or f(R) theories. One way to test modified gravity is including new terms on the velocity dispersion expression (https://arxiv.org/abs/2011.15089), a parameter that can be measured with spectroscopic observations and its expression depends on . That’s why its expression is so important because using it we can determine the value of the Post-Newtonian Parameter.
@@ -195,7 +180,7 @@ Goal
 Bayesian analysis is used to minimize theoretical functions. So, here our goal is to minimize our new velocity dispersion expression to obtain the value which maximizes our distribution.
 
 
-Project 10 - Estimating stellar metallicities with S-PLUS photometry (Eduardo)
+## Project 10 - Estimating stellar metallicities with S-PLUS photometry (Eduardo)
 Introduction
 Traditionally, one may refer to stellar metallicity as a comparative quantity that works as a first approach to understanding the chemical composition of stars.The amount of iron (relative to hydrogen) of a star is denoted [Fe/H], where the brackets indicate a comparison against the Sun, and it approximately accounts for all elements other than hydrogen and helium present in its atmosphere. Metallicity values are usually estimated by means of spectroscopy, given that atomic transitions leave unique signatures on stellar spectra, but photometry can also be explored, especially if various broad and narrow band filters are available, as it is the case for the Southern Photometric Local Universe Survey (S-PLUS).
 Goal
@@ -214,7 +199,7 @@ INTENDED STEPS
 4) Use the Random Forest algorithm, and use MAE to have an idea of the precision of the model.
 5) If there's time, compare those results with another simpler model, the Decision Tree, comparing their MAE.
 
-Project 12 - Seismic facies analysis using machine learning. (Eldues)
+## Project 12 - Seismic facies analysis using machine learning. (Eldues)
 INTRODUCTION
 Seismic reflection data are a key source of information in numerous fields of geoscience, including sedimentology and stratigraphy (e.g., Vail, 1987; Posamentier, 2004), structural geology (Baudon and Cartwright, 2008; Jackson et al., 2014), geomorphology (e.g., Posamentier and Kolla, 2003; Cartwright and Huuse, 2005; Bull et al., 2009), and volcanology (e.g., Hansen et al., 2004; Planke et al., 2005; Magee et al., 2013). However, the often subjective and nonunique interpretation of seismic reflection data has led to longstanding debates based on contrasting geologic interpretations of the same or similar data sets (e.g., Stewart and Allen, 2002; Underhill, 2004). Moreover, seismic interpretations require significant amounts of time, experience, and expertise from interpreters (e.g., Bond et al., 2012; Bond, 2015; Macrae et al., 2016). We believe that machine-learning techniques can help interpreters reduce some of these problems associated with seismic facies analyses.
 https://library.seg.org/doi/full/10.1190/geo2017-0595.1#pane-pcw-references
@@ -222,7 +207,7 @@ GOAL
 Implement tools and libraries used in class.
 
 
-Project 13 - Estimating the Photometric Redshift.
+## Project 13 - Estimating the Photometric Redshift.
 
 
 Introduction:
@@ -241,7 +226,7 @@ What am I going to do?
 
 Firstable i intend to determine if the information from the photometric bands W1, w2, w3, w4 really matters to determine a reliable photometric redshift. To do this, I clean the catalog, throwing away all the objects with some missing value (for any magnitude). Then I apply some Deep Learning routines using tensorflow to this "cleaned dataset". Also, I repeat the method not using some photometric bands, and comparer the final predictions. After that, I wish to apply the same routine in the original dataset but changing the missing data for representative values of their statistical distribution. Finally I will compare how much this input fake data can improve (or not) the final predictions of our Deep Learning model.
 
-Project 14 - Bayesian Inference using Normalizing Flows
+## Project 14 - Bayesian Inference using Normalizing Flows
 
 Introdução
 
