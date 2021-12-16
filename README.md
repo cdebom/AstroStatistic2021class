@@ -1,5 +1,5 @@
 # AstroStatistic2021class
-This repository concentrates the codes and notebooks related to the final term projects of AstroStatistics and Big Data lectures at CBPF for 2021.b (professor Clecio R. Bom). You can find the description of each project below. For further info on 
+This repository concentrates the codes and notebooks related to the final term projects of AstroStatistics and Big Data lectures at CBPF for 2021.b (professor Clecio R. Bom). You can find the description of each project below. For further info on www.clearnightsrthebest.com 
 
 ## Projeto 01 - Strong Lensing Simulations with Lenstronomy
 Grasiele
@@ -54,7 +54,9 @@ https://www.legacysurvey.org/dr9/catalogs/#region-tractor-aaa-tractor-brick-fits
 Ivezić, Željko, et al. Statistics, data mining, and machine learning in astronomy: A practical python guide for the analysis of survey data. Princeton University Press, 2019.
 
 
-## Project 03 - Bayesian inference of H0 from simulated time delays (Arthur)
+## Project 03 - Bayesian inference of H0 from simulated time delays
+ (Arthur)
+
 
 ### Introdução
 Time de delay é uma forma de medir a diferença de tempo de um sistema de lente gravitacional. Se objetos como quasares ou supernovas são afetados por lentes gravitacionais fortes, sua frente de onda de propagação se divide ao passar por esse objeto massivo (lente), formando múltiplas imagens. Além disso, essas imagens aparecem em tempos diferentes devido às diferentes geometrias entre os caminhos que a luz percorre, chegando em tempos diferentes ao observador. Ou seja, time delay é a diferença de tempo de chegada entre as imagens formadas. Nesse sentido, podemos medir essa diferença de time delay para fazer uma estimativa da constante de Hubble que é sensível a diferença de tempo dessas imagens múltiplas.
@@ -65,7 +67,9 @@ Obter uma estimativa da constante de Hubble através da análise de um conjunto 
 Primeiro vamos utilizar as informações de um conjunto de dados contendo determinados parâmetros, tais como o ângulo de Einstein e red-shifts da lente e da fonte, necessários para encontrar um sistema de lentes gravitacionais que formam múltiplas imagens, e com isso podemos determinar o time delay desses sistemas. Depois, é realizada uma inferência bayesiana nesses dados através de uma cadeia MCMC para determinar a distribuição de probabilidades dos parâmetros livres. Entre esses parâmetros está a constante de Hubble que desejamos estimar. 
 
 
-## Project 03.a - Deep or Bayesian? SL parameter inference (João)
+## Project 03.a - Deep or Bayesian? SL parameter inference 
+
+(João)
 
 ### Introduction
 The gravitational lensing effect, first proposed by Albert Einstein and confirmed later, in the XX century, has been a powerful tool in astronomy and cosmology. This is due to its slip parameter (also called by gamma factor), which gives an intuition on how different a theory could be from general relativity. In addition, with new surveys, such as, the last release of the dark energy survey (DES), the Hyper Suprime-Cam and the first available data of the Large Synoptic Survey Telescope (LSST) we will be able to improve precision. For this reason, faster and automated methods will be required in order to analyse these data. In this work, we intend to do a cross-check analysis between deep learning and Bayesian approaches.
@@ -93,7 +97,7 @@ https://arxiv.org/pdf/astro-ph/0003008.pdf
 https://arxiv.org/pdf/1302.0183.pdf
 
 ## Project 05 -  Clustering analysis to separate star/galaxies in a survey.
-Thiago
+Thiago Carneiro
 ### GOAL
 
 Correctly distinguish between stars and galaxies in a catalog using a variety of machine learning techniques.
@@ -104,7 +108,8 @@ Surveys map astronomical numbers of both stars and galaxies (among others) on th
 ### WHAT AM I GOING TO DO?
 I'll approach the problem of identifying stars in a catalog using multiple ML techniques (e.g. Random Forest Trees, Logistic Regression, etc.), measuring how well each approach partitions the data. The results will allow us to evaluate which methods are the best ones for this task.
 
-## Project 06 - We don't really miss you (Cristiane)
+## Project 06 - We don't really miss you 
+Cristiane
 
 ### Introduction
 
@@ -153,7 +158,7 @@ https://machinelearningmastery.com/model-based-outlier-detection-and-removal-in-
 
 ## Project 08 - Searching for pattern in galaxy structure 
 Mariana
- É conhecido por meio de observações que o ambiente tem papel relevante nas propriedades das galáxias (por exemplo, Dressler et al 1980). No entanto, ainda não sabemos de que forma o ambiente interfere na evolução intrínseca das galáxias. Para obter insights sobre este tema podemos investigar aglomerados de galáxias, que são as estruturas mais densas do Universo, em seus estágios iniciais de formação - os chamados protoaglomerados. Ao analisarmos protoaglomerados em diferentes estágios evolutivos podemos ter pistas sobre a evolução do efeito ambiental nestas estruturas muito massivas.	Neste projeto buscamos refazer a análise de Toshikawa et al 2020 em z~4 , em que um dos argumentos* para sugerir a existência de protoaglomerados é: se a distribuição espacial das galáxias dentro de um volume amostrado tem baixíssima probabilidade de ser randômica, estas galáxias provavelmente estão agrupadas por alguma razão física (poço de potencial gravitacional) invés de constituirem uma estrutura formada ao acaso. Neste caso há indícios da existência de um protoaglomerado. Vamos verificar se um dos protoaglomerados identificados no artigo Toshikawa et al 2020 é provavelmente uma estrutura formada ao acaso ou não. Para fazer esta análise vamos utilizar os dados do próprio artigo sobre um protoaglomerado de 13 galáxias em z~4 identificado por eles e:
+ É conhecido por meio de observações que o ambiente tem papel relevante nas propriedades das galáxias (por exemplo, Dressler et al 1980). No entanto, ainda não sabemos de que forma o ambiente interfere na evolução intrínseca das galáxias. Para obter insights sobre este tema podemos investigar aglomerados de galáxias, que são as estruturas mais densas do Universo, em seus estágios iniciais de formação - os chamados protoaglomerados. Ao analisarmos protoaglomerados em diferentes estágios evolutivos podemos ter pistas sobre a evolução do efeito ambiental nestas estruturas muito massivas.	Neste projeto buscamos refazer a análise de Toshikawa et al 2020 em z aproximadamente 4 , em que um dos argumentos* para sugerir a existência de protoaglomerados é: se a distribuição espacial das galáxias dentro de um volume amostrado tem baixíssima probabilidade de ser randômica, estas galáxias provavelmente estão agrupadas por alguma razão física (poço de potencial gravitacional) invés de constituirem uma estrutura formada ao acaso. Neste caso há indícios da existência de um protoaglomerado. Vamos verificar se um dos protoaglomerados identificados no artigo Toshikawa et al 2020 é provavelmente uma estrutura formada ao acaso ou não. Para fazer esta análise vamos utilizar os dados do próprio artigo sobre um protoaglomerado de 13 galáxias em z~4 identificado por eles e:
 * Redistribuir randomicamente todas as galáxias detectadas dentro do volume amostrado por eles
 * Verificar a probabilidade de 13 do número total de galáxias se agruparem dentro de uma faixa de redshift de deltaz=0.02 (como no protoaglomerado detectado)
 * Concluir se esta estrutura de 13 galáxias dentro de um deltaz=0.02 tem alta ou baixa probabilidade de ser uma estrutura formada ao acaso e comparar com os resultados de Toshikawa et al 2020
