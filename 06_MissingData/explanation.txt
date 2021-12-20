@@ -39,4 +39,4 @@ The clean data is in https://drive.google.com/file/d/1ZYyZhndvKFoC3tm2V7hcZyR8KV
 In the Dense file, you will find the notebooks that "went wrong" using Dense Neural Networks, and the ones with missing data techniques.
 In the Random file we use the Random Forest.
 
-More information in the slides called apresentation.
+More information in the slides called presentation.
